@@ -1,64 +1,64 @@
-# ??? LegalManager.Pro
+#  LegalManager.Pro
 
-> **Sistema de Gest„o JurÌdica** - Uma soluÁ„o completa para escritÛrios de advocacia
+> **Sistema de Gest√£o Jur√≠dica** - Uma solu√ß√£o completa para escrit√≥rios de advocacia
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/download)
 [![C#](https://img.shields.io/badge/C%23-12.0-green.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Willians167/LegalManager.Pro)
 
-## ?? Sobre o Projeto
+##  Sobre o Projeto
 
-O **LegalManager.Pro** È um sistema de gest„o jurÌdica (LegalTech) desenvolvido com foco em escritÛrios de advocacia modernos. ConstruÌdo seguindo os princÌpios da **Clean Architecture** e **Domain Driven Design (DDD)**, oferece uma soluÁ„o robusta, escal·vel e de f·cil manutenÁ„o.
+O **LegalManager.Pro** √© um sistema de gest√£o jur√≠dica (LegalTech) desenvolvido com foco em escrit√≥rios de advocacia modernos. Constru√≠do seguindo os princ√≠pios da **Clean Architecture** e **Domain Driven Design (DDD)**, oferece uma solu√ß√£o robusta, escal√°vel e de f√°cil manuten√ß√£o.
 
 ### ?? Objetivos
 
-- Modernizar a gest„o de escritÛrios de advocacia
-- Centralizar informaÁıes de clientes, processos e documentos
+- Modernizar a gest√£o de escrit√≥rios de advocacia
+- Centralizar informa√ß√µes de clientes, processos e documentos
 - Automatizar controle de prazos e agenda
 - Prover dashboards com indicadores de performance
-- Garantir seguranÁa e conformidade com LGPD
+- Garantir seguran√ßa e conformidade com LGPD
 
-## ? Funcionalidades
+##  Funcionalidades
 
-### ?? **AutenticaÁ„o e AutorizaÁ„o**
-- Sistema de autenticaÁ„o JWT com Refresh Token
+###  **Autentica√ß√£o e Autoriza√ß√£o**
+- Sistema de autentica√ß√£o JWT com Refresh Token
 - Controle de acesso baseado em perfis (Admin, Advogado, Assistente)
-- Gest„o de usu·rios com diferentes nÌveis de permiss„o
+- Gest√£o de usu√°rios com diferentes n√≠veis de permiss√£o
 
-### ?? **Gest„o de Usu·rios**
-- Cadastro e manutenÁ„o de usu·rios
-- Controle de perfis e permissıes
-- HistÛrico de acesso e atividades
+###  **Gest√£o de Usu√°rios**
+- Cadastro e manuten√ß√£o de usu√°rios
+- Controle de perfis e permiss√µes
+- Hist√≥rico de acesso e atividades
 
-### ?? **Gest„o de Clientes**
-- Cadastro completo de pessoas fÌsicas e jurÌdicas
-- Controle de documentos e informaÁıes de contato
-- HistÛrico de relacionamento
+###  **Gest√£o de Clientes**
+- Cadastro completo de pessoas f√≠sicas e jur√≠dicas
+- Controle de documentos e informa√ß√µes de contato
+- Hist√≥rico de relacionamento
 
-### ?? **Gest„o de Processos JurÌdicos**
+###  **Gest√£o de Processos Jur√≠dicos**
 - Controle completo de processos
 - Acompanhamento de andamentos
-- VinculaÁ„o com clientes e respons·veis
+- Vincula√ß√£o com clientes e respons√°veis
 
-### ?? **Controle de Prazos e Agenda**
+###  **Controle de Prazos e Agenda**
 - Sistema de alertas para prazos processuais
 - Agenda integrada com processos
-- NotificaÁıes autom·ticas
+- Notifica√ß√µes autom√°ticas
 
-### ?? **Gerenciamento de Documentos**
-- Upload e organizaÁ„o de documentos
+###  **Gerenciamento de Documentos**
+- Upload e organiza√ß√£o de documentos
 - Versionamento e controle de acesso
-- IntegraÁ„o com processos
+- Integra√ß√£o com processos
 
-### ?? **Dashboard e RelatÛrios**
+###  **Dashboard e Relat√≥rios**
 - Indicadores de performance
-- RelatÛrios gerenciais
-- An·lises estatÌsticas
+- Relat√≥rios gerenciais
+- An√°lises estat√≠sticas
 
-## ??? Arquitetura
+##  Arquitetura
 
-O projeto segue os princÌpios da **Clean Architecture** com **Domain Driven Design**, garantindo:
+O projeto segue os princ√≠pios da **Clean Architecture** com **Domain Driven Design**, garantindo:
 
 ```
 ???????????????????
@@ -82,53 +82,53 @@ O projeto segue os princÌpios da **Clean Architecture** com **Domain Driven Desi
 
 ### ?? Camadas do Sistema
 
-#### ?? **Domain Layer** (N˙cleo do NegÛcio)
+#### ?? **Domain Layer** (N√∫cleo do Neg√≥cio)
 - **Entidades**: `Usuario`, `Cliente`, `ProcessoJuridico`, `Documento`
 - **Value Objects**: `Email`, `CPF`, `CNPJ`, `Endereco`, `Telefone`
 - **Enums**: `PerfilUsuario`, `StatusProcesso`, `TipoDocumento`
-- **Regras de NegÛcio**: ValidaÁıes e comportamentos especÌficos do domÌnio jurÌdico
+- **Regras de Neg√≥cio**: Valida√ß√µes e comportamentos espec√≠ficos do dom√≠nio jur√≠dico
 
 #### ?? **Application Layer** (Casos de Uso)
-- **Commands**: OperaÁıes que alteram estado do sistema
-- **Queries**: Consultas e recuperaÁ„o de dados
+- **Commands**: Opera√ß√µes que alteram estado do sistema
+- **Queries**: Consultas e recupera√ß√£o de dados
 - **Handlers**: Processamento dos commands e queries
-- **DTOs**: Objetos de transferÍncia de dados
+- **DTOs**: Objetos de transfer√™ncia de dados
 - **Interfaces**: Contratos para infraestrutura
 
 #### ?? **Infrastructure Layer** (Tecnologia)
-- **Entity Framework Core**: PersistÍncia de dados
-- **Repositories**: ImplementaÁ„o do padr„o Repository
-- **Identity**: AutenticaÁ„o e autorizaÁ„o
-- **External Services**: IntegraÁ„o com APIs externas
-- **Configurations**: Mapeamentos e configuraÁıes do EF
+- **Entity Framework Core**: Persist√™ncia de dados
+- **Repositories**: Implementa√ß√£o do padr√£o Repository
+- **Identity**: Autentica√ß√£o e autoriza√ß√£o
+- **External Services**: Integra√ß√£o com APIs externas
+- **Configurations**: Mapeamentos e configura√ß√µes do EF
 
 #### ?? **API Layer** (Interface)
 - **Controllers**: Endpoints REST
 - **Middlewares**: Cross-cutting concerns
-- **Filters**: ValidaÁıes e tratamento de erros
-- **Authentication**: ConfiguraÁ„o JWT
-- **Swagger**: DocumentaÁ„o da API
+- **Filters**: Valida√ß√µes e tratamento de erros
+- **Authentication**: Configura√ß√£o JWT
+- **Swagger**: Documenta√ß√£o da API
 
 ## ??? Tecnologias Utilizadas
 
 ### **Backend**
 - **.NET 8.0** - Framework principal
-- **C# 12** - Linguagem de programaÁ„o
+- **C# 12** - Linguagem de programa√ß√£o
 - **ASP.NET Core Web API** - Framework web
 - **Entity Framework Core** - ORM para acesso a dados
 - **SQL Server** - Banco de dados principal
 
-### **AutenticaÁ„o & SeguranÁa**
-- **JWT (JSON Web Tokens)** - AutenticaÁ„o stateless
-- **Refresh Tokens** - RenovaÁ„o segura de tokens
+### **Autentica√ß√£o & Seguran√ßa**
+- **JWT (JSON Web Tokens)** - Autentica√ß√£o stateless
+- **Refresh Tokens** - Renova√ß√£o segura de tokens
 - **BCrypt** - Hash de senhas
-- **HTTPS** - ComunicaÁ„o criptografada
+- **HTTPS** - Comunica√ß√£o criptografada
 
-### **DocumentaÁ„o & Testes**
-- **Swagger/OpenAPI** - DocumentaÁ„o interativa da API
-- **xUnit** - Framework de testes unit·rios
+### **Documenta√ß√£o & Testes**
+- **Swagger/OpenAPI** - Documenta√ß√£o interativa da API
+- **xUnit** - Framework de testes unit√°rios
 - **Moq** - Biblioteca de mocking
-- **FluentAssertions** - Assertions mais legÌveis
+- **FluentAssertions** - Assertions mais leg√≠veis
 
 ### **Logs & Monitoramento**
 - **Serilog** - Logging estruturado
@@ -141,72 +141,72 @@ O projeto segue os princÌpios da **Clean Architecture** com **Domain Driven Desi
 
 ## ?? Como Executar
 
-### **PrÈ-requisitos**
+### **Pr√©-requisitos**
 - **.NET 8.0 SDK** ou superior
 - **SQL Server** (LocalDB, Express ou completo)
-- **Git** para controle de vers„o
+- **Git** para controle de vers√£o
 - **IDE**: Visual Studio 2022 ou VS Code
 
-### **Clonando o RepositÛrio**
+### **Clonando o Reposit√≥rio**
 ```bash
 git clone https://github.com/Willians167/LegalManager.Pro.git
 cd LegalManager-pro
 ```
 
-### **Restaurando DependÍncias**
+### **Restaurando Depend√™ncias**
 ```bash
 dotnet restore
 ```
 
-### **ConfiguraÁ„o do Banco de Dados**
+### **Configura√ß√£o do Banco de Dados**
 1. Configure a connection string no `appsettings.json`
 2. Execute as migrations:
 ```bash
 dotnet ef database update --project LegalManager.Pro.Infrastructure --startup-project LegalManager.Pro.API
 ```
 
-### **Executando a AplicaÁ„o**
+### **Executando a Aplica√ß√£o**
 ```bash
 dotnet run --project LegalManager.Pro.API
 ```
 
-A API estar· disponÌvel em: `https://localhost:7001`
+A API estar√° dispon√≠vel em: `https://localhost:7001`
 
-### **Acessando a DocumentaÁ„o**
+### **Acessando a Documenta√ß√£o**
 Swagger UI: `https://localhost:7001/swagger`
 
 ## ?? Estrutura do Projeto
 
 ```
 LegalManager.Pro/
-??? ?? LegalManager.Pro.Domain/          # Camada de DomÌnio
-?   ??? ?? Entities/                     # Entidades de negÛcio
-?   ?   ??? Usuario.cs                   # Entidade usu·rio ?
+??? ?? LegalManager.Pro.Domain/          # Camada de Dom√≠nio
+?   ??? ?? Entities/                     # Entidades de neg√≥cio
+?   ?   ??? Usuario.cs                   # Entidade usu√°rio ?
 ?   ??? ?? ValueObjects/                 # Objetos de valor
 ?   ?   ??? Email.cs                     # Value object para email ?
-?   ??? ?? Enums/                        # EnumeraÁıes
-?   ?   ??? PerfilUsuario.cs             # Perfis de usu·rio ?
-?   ??? ?? Interfaces/                   # Interfaces do domÌnio
-??? ?? LegalManager.Pro.Application/     # Camada de AplicaÁ„o
+?   ??? ?? Enums/                        # Enumera√ß√µes
+?   ?   ??? PerfilUsuario.cs             # Perfis de usu√°rio ?
+?   ??? ?? Interfaces/                   # Interfaces do dom√≠nio
+??? ?? LegalManager.Pro.Application/     # Camada de Aplica√ß√£o
 ?   ??? ?? Commands/                     # Comandos (CQRS)
 ?   ??? ?? Queries/                      # Consultas (CQRS)
 ?   ??? ?? Handlers/                     # Manipuladores
 ?   ??? ?? DTOs/                         # Data Transfer Objects
-?   ??? ?? Interfaces/                   # Contratos da aplicaÁ„o
+?   ??? ?? Interfaces/                   # Contratos da aplica√ß√£o
 ??? ?? LegalManager.Pro.Infrastructure/  # Camada de Infraestrutura
 ?   ??? ?? Data/                         # Contexto do EF Core
-?   ??? ?? Repositories/                 # ImplementaÁ„o dos repositÛrios
-?   ??? ?? Configurations/               # ConfiguraÁıes do EF
-?   ??? ?? Migrations/                   # MigraÁıes do banco
-?   ??? ?? Services/                     # ServiÁos de infraestrutura
-??? ?? LegalManager.Pro.API/             # Camada de ApresentaÁ„o
+?   ??? ?? Repositories/                 # Implementa√ß√£o dos reposit√≥rios
+?   ??? ?? Configurations/               # Configura√ß√µes do EF
+?   ??? ?? Migrations/                   # Migra√ß√µes do banco
+?   ??? ?? Services/                     # Servi√ßos de infraestrutura
+??? ?? LegalManager.Pro.API/             # Camada de Apresenta√ß√£o
 ?   ??? ?? Controllers/                  # Controllers da API
 ?   ??? ?? Middlewares/                  # Middlewares customizados
 ?   ??? ?? Filters/                      # Filtros da API
 ?   ??? Program.cs                       # Ponto de entrada ?
 ??? ?? LegalManager.Pro.Tests/           # Testes
-    ??? ?? Domain/                       # Testes da camada de domÌnio
-    ??? ?? Application/                  # Testes da camada de aplicaÁ„o
+    ??? ?? Domain/                       # Testes da camada de dom√≠nio
+    ??? ?? Application/                  # Testes da camada de aplica√ß√£o
     ??? ?? Infrastructure/               # Testes da infraestrutura
     ??? ?? API/                          # Testes da API
 ```
@@ -223,14 +223,14 @@ dotnet test
 dotnet test --collect:"XPlat Code Coverage"
 ```
 
-### **Testes de uma Camada EspecÌfica**
+### **Testes de uma Camada Espec√≠fica**
 ```bash
 dotnet test LegalManager.Pro.Tests/
 ```
 
 ## ?? Exemplos de Uso da API
 
-### **AutenticaÁ„o**
+### **Autentica√ß√£o**
 ```http
 POST /api/auth/login
 Content-Type: application/json
@@ -241,21 +241,21 @@ Content-Type: application/json
 }
 ```
 
-### **Criando um Usu·rio**
+### **Criando um Usu√°rio**
 ```http
 POST /api/usuarios
 Authorization: Bearer {token}
 Content-Type: application/json
 
 {
-  "nome": "Jo„o Silva",
+  "nome": "Jo√£o Silva",
   "email": "joao.silva@legalmanager.com",
   "senha": "SenhaSegura123!",
   "perfil": 2
 }
 ```
 
-### **Consultando Usu·rios**
+### **Consultando Usu√°rios**
 ```http
 GET /api/usuarios?perfil=Advogado&ativo=true
 Authorization: Bearer {token}
@@ -273,7 +273,7 @@ public class Usuario
     public PerfilUsuario Perfil { get; private set; }
     public bool Ativo { get; private set; }
     
-    // MÈtodos de negÛcio
+    // M√©todos de neg√≥cio
     public void AlterarEmail(Email novoEmail) { }
     public void RegistrarLogin() { }
     public void Desativar() { }
@@ -288,8 +288,8 @@ public sealed class Email : IEquatable<Email>
     
     public static Email Criar(string email)
     {
-        // ValidaÁıes de formato e obrigatoriedade
-        // NormalizaÁ„o (trim, lowercase)
+        // Valida√ß√µes de formato e obrigatoriedade
+        // Normaliza√ß√£o (trim, lowercase)
         return new Email(email);
     }
 }
@@ -305,120 +305,120 @@ public enum PerfilUsuario
 }
 ```
 
-## ?? PrincÌpios Aplicados
+## ?? Princ√≠pios Aplicados
 
 ### **SOLID**
-- ? **S**ingle Responsibility: Cada classe tem uma responsabilidade especÌfica
-- ? **O**pen/Closed: Abertas para extens„o, fechadas para modificaÁ„o
+- ? **S**ingle Responsibility: Cada classe tem uma responsabilidade espec√≠fica
+- ? **O**pen/Closed: Abertas para extens√£o, fechadas para modifica√ß√£o
 - ? **L**iskov Substitution: Subtipos substituem tipos base
-- ? **I**nterface Segregation: Interfaces especÌficas e coesas
-- ? **D**ependency Inversion: DependÍncia de abstraÁıes, n„o implementaÁıes
+- ? **I**nterface Segregation: Interfaces espec√≠ficas e coesas
+- ? **D**ependency Inversion: Depend√™ncia de abstra√ß√µes, n√£o implementa√ß√µes
 
 ### **DDD (Domain Driven Design)**
-- ? **Ubiquitous Language**: Linguagem comum entre negÛcio e desenvolvimento
+- ? **Ubiquitous Language**: Linguagem comum entre neg√≥cio e desenvolvimento
 - ? **Bounded Contexts**: Contextos bem definidos
 - ? **Entities**: Objetos com identidade e ciclo de vida
-- ? **Value Objects**: Objetos imut·veis definidos por seus valores
-- ? **Domain Services**: LÛgica de negÛcio que n„o pertence a entidades
+- ? **Value Objects**: Objetos imut√°veis definidos por seus valores
+- ? **Domain Services**: L√≥gica de neg√≥cio que n√£o pertence a entidades
 
 ### **Clean Architecture**
-- ? **Independence of Frameworks**: N„o dependente de frameworks especÌficos
-- ? **Testable**: Regras de negÛcio podem ser testadas sem UI, banco, etc.
+- ? **Independence of Frameworks**: N√£o dependente de frameworks espec√≠ficos
+- ? **Testable**: Regras de neg√≥cio podem ser testadas sem UI, banco, etc.
 - ? **Independence of UI**: UI pode mudar sem afetar o sistema
 - ? **Independence of Database**: Banco pode ser trocado sem impacto
-- ? **Independence of External Agencies**: Regras de negÛcio n„o sabem sobre o mundo externo
+- ? **Independence of External Agencies**: Regras de neg√≥cio n√£o sabem sobre o mundo externo
 
 ## ?? Contribuindo
 
 ### **Como Contribuir**
-1. FaÁa um Fork do projeto
+1. Fa√ßa um Fork do projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanÁas (`git commit -m 'feat: Add some AmazingFeature'`)
+3. Commit suas mudan√ßas (`git commit -m 'feat: Add some AmazingFeature'`)
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-### **Padrıes de Commit**
+### **Padr√µes de Commit**
 ```
 feat: nova funcionalidade
-fix: correÁ„o de bug
-docs: documentaÁ„o
-style: formataÁ„o, ponto e vÌrgula ausente, etc
-refactor: refatoraÁ„o de cÛdigo
-test: adiÁ„o ou correÁ„o de testes
-chore: tarefas de build, configuraÁ„o, etc
+fix: corre√ß√£o de bug
+docs: documenta√ß√£o
+style: formata√ß√£o, ponto e v√≠rgula ausente, etc
+refactor: refatora√ß√£o de c√≥digo
+test: adi√ß√£o ou corre√ß√£o de testes
+chore: tarefas de build, configura√ß√£o, etc
 ```
 
 ### **Code Review**
-- Seguir princÌpios SOLID
+- Seguir princ√≠pios SOLID
 - Manter cobertura de testes > 80%
-- Documentar APIs p˙blicas
-- Seguir padrıes do projeto
+- Documentar APIs p√∫blicas
+- Seguir padr√µes do projeto
 
 ## ?? Roadmap
 
-### **Fase 1 - FundaÁ„o** ?
+### **Fase 1 - Funda√ß√£o** ?
 - [x] Estrutura do projeto com Clean Architecture
-- [x] Domain Layer com entidades b·sicas (Usuario)
-- [x] Value Objects (Email) com validaÁıes
-- [x] Enums de domÌnio (PerfilUsuario)
-- [x] ConfiguraÁ„o inicial da API com Swagger
+- [x] Domain Layer com entidades b√°sicas (Usuario)
+- [x] Value Objects (Email) com valida√ß√µes
+- [x] Enums de dom√≠nio (PerfilUsuario)
+- [x] Configura√ß√£o inicial da API com Swagger
 
 ### **Fase 2 - Core Business** ??
 - [ ] Application Layer completa (CQRS)
 - [ ] Infrastructure Layer com EF Core
-- [ ] Sistema de autenticaÁ„o JWT
-- [ ] CRUD completo de usu·rios
+- [ ] Sistema de autentica√ß√£o JWT
+- [ ] CRUD completo de usu√°rios
 
-### **Fase 3 - DomÌnio Expandido** ??
+### **Fase 3 - Dom√≠nio Expandido** ??
 - [ ] Entidade Cliente com Value Objects (CPF, CNPJ)
 - [ ] Entidade ProcessoJuridico
 - [ ] Entidade Documento
 - [ ] Value Object Endereco
 
-### **Fase 4 - Funcionalidades AvanÁadas** ??
-- [ ] Gest„o de processos jurÌdicos
+### **Fase 4 - Funcionalidades Avan√ßadas** ??
+- [ ] Gest√£o de processos jur√≠dicos
 - [ ] Sistema de documentos
 - [ ] Controle de prazos e agenda
-- [ ] NotificaÁıes autom·ticas
+- [ ] Notifica√ß√µes autom√°ticas
 
-### **Fase 5 - Interface e ExperiÍncia** ??
+### **Fase 5 - Interface e Experi√™ncia** ??
 - [ ] Frontend Angular
 - [ ] Dashboard interativo
-- [ ] RelatÛrios e an·lises
+- [ ] Relat√≥rios e an√°lises
 - [ ] Mobile app (PWA)
 
-### **Fase 6 - ProduÁ„o** ??
+### **Fase 6 - Produ√ß√£o** ??
 - [ ] Deploy automatizado
 - [ ] Monitoramento e logs
 - [ ] Backup automatizado
-- [ ] DocumentaÁ„o completa
+- [ ] Documenta√ß√£o completa
 
-## ?? Aprendizados TÈcnicos
+## ?? Aprendizados T√©cnicos
 
 Este projeto demonstra:
 
 ### **Clean Architecture**
-- SeparaÁ„o clara de responsabilidades
-- DependÍncias apontando para o centro
+- Separa√ß√£o clara de responsabilidades
+- Depend√™ncias apontando para o centro
 - Testabilidade e manutenibilidade
 
 ### **Domain Driven Design**
-- Modelagem rica do domÌnio
-- Value Objects com validaÁıes
-- Linguagem ubÌqua
+- Modelagem rica do dom√≠nio
+- Value Objects com valida√ß√µes
+- Linguagem ub√≠qua
 
-### **Boas Pr·ticas C#**
+### **Boas Pr√°ticas C#**
 - Encapsulamento com `private set`
-- Factory methods para criaÁ„o segura
-- ImplementaÁ„o adequada de `IEquatable`
+- Factory methods para cria√ß√£o segura
+- Implementa√ß√£o adequada de `IEquatable`
 - Operators overloading
 - Implicit conversions
 
 ### **Arquitetura Empresarial**
 - Estrutura de projetos profissional
-- ConfiguraÁ„o adequada do .NET 8
-- Padrıes de nomenclatura
-- OrganizaÁ„o de pastas
+- Configura√ß√£o adequada do .NET 8
+- Padr√µes de nomenclatura
+- Organiza√ß√£o de pastas
 
 ## ?? Contato
 
@@ -427,9 +427,9 @@ Este projeto demonstra:
 **LinkedIn:** [willians-silva](https://linkedin.com/in/willians-silva)  
 **GitHub:** [@Willians167](https://github.com/Willians167)
 
-## ?? LicenÁa
+## ?? Licen√ßa
 
-Este projeto est· licenciado sob a [MIT License](LICENSE).
+Este projeto est√° licenciado sob a [MIT License](LICENSE).
 
 ---
 
@@ -439,4 +439,4 @@ Este projeto est· licenciado sob a [MIT License](LICENSE).
 
 ---
 
-> **"O melhor cÛdigo È aquele que conta uma histÛria clara do negÛcio!"**
+> **"O melhor c√≥digo √© aquele que conta uma hist√≥ria clara do neg√≥cio!"**
