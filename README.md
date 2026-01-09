@@ -1,4 +1,4 @@
-# ??? LegalManager.Pro
+# LegalManager.Pro
 
 > **Sistema de Gestão Jurídica** - Uma solução completa para escritórios de advocacia
 
@@ -7,11 +7,11 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/Willians167/LegalManager.Pro)
 
-## ?? Sobre o Projeto
+## Sobre o Projeto
 
 O **LegalManager.Pro** é um sistema de gestão jurídica (LegalTech) desenvolvido com foco em escritórios de advocacia modernos. Construído seguindo os princípios da **Clean Architecture** e **Domain Driven Design (DDD)**, oferece uma solução robusta, escalável e de fácil manutenção.
 
-### ?? Objetivos
+### Objetivos
 
 - Modernizar a gestão de escritórios de advocacia
 - Centralizar informações de clientes, processos e documentos
@@ -19,97 +19,97 @@ O **LegalManager.Pro** é um sistema de gestão jurídica (LegalTech) desenvolvido 
 - Prover dashboards com indicadores de performance
 - Garantir segurança e conformidade com LGPD
 
-## ? Funcionalidades
+## Funcionalidades
 
-### ?? **Autenticação e Autorização**
+### **Autenticação e Autorização**
 - Sistema de autenticação JWT com Refresh Token
 - Controle de acesso baseado em perfis (Admin, Advogado, Assistente)
 - Gestão de usuários com diferentes níveis de permissão
 
-### ?? **Gestão de Usuários**
+### **Gestão de Usuários**
 - Cadastro e manutenção de usuários
 - Controle de perfis e permissões
 - Histórico de acesso e atividades
 
-### ?? **Gestão de Clientes**
+### **Gestão de Clientes**
 - Cadastro completo de pessoas físicas e jurídicas
 - Controle de documentos e informações de contato
 - Histórico de relacionamento
 
-### ?? **Gestão de Processos Jurídicos**
+### **Gestão de Processos Jurídicos**
 - Controle completo de processos
 - Acompanhamento de andamentos
 - Vinculação com clientes e responsáveis
 
-### ?? **Controle de Prazos e Agenda**
+### **Controle de Prazos e Agenda**
 - Sistema de alertas para prazos processuais
 - Agenda integrada com processos
 - Notificações automáticas
 
-### ?? **Gerenciamento de Documentos**
+### **Gerenciamento de Documentos**
 - Upload e organização de documentos
 - Versionamento e controle de acesso
 - Integração com processos
 
-### ?? **Dashboard e Relatórios**
+### **Dashboard e Relatórios**
 - Indicadores de performance
 - Relatórios gerenciais
 - Análises estatísticas
 
-## ??? Arquitetura
+## Arquitetura
 
 O projeto segue os princípios da **Clean Architecture** com **Domain Driven Design**, garantindo:
 
 ```
 ???????????????????
-?   ?? API Layer  ?  ? Controllers, Middlewares, Auth
+?   API Layer     ?  ? Controllers, Middlewares, Auth
 ???????????????????
-          ?
+      ?
 ???????????????????
-??? Application   ?  ? Use Cases, Commands, Queries
-?     Layer       ?
+? Application     ?  ? Use Cases, Commands, Queries
+? Layer           ?
 ???????????????????
-          ?
+      ?
 ???????????????????
-??? Domain Layer  ?  ? Entities, Value Objects, Rules
+? Domain Layer    ?  ? Entities, Value Objects, Rules
 ???????????????????
-          ?
+      ?
 ???????????????????
-??? Infrastructure?  ? EF Core, Repositories, External APIs
-?     Layer       ?
+? Infrastructure  ?  ? EF Core, Repositories, External APIs
+? Layer           ?
 ???????????????????
 ```
 
-### ?? Camadas do Sistema
+### Camadas do Sistema
 
-#### ?? **Domain Layer** (Núcleo do Negócio)
+#### **Domain Layer** (Núcleo do Negócio)
 - **Entidades**: `Usuario`, `Cliente`, `ProcessoJuridico`, `Documento`
 - **Value Objects**: `Email`, `CPF`, `CNPJ`, `Endereco`, `Telefone`
 - **Enums**: `PerfilUsuario`, `StatusProcesso`, `TipoDocumento`
 - **Regras de Negócio**: Validações e comportamentos específicos do domínio jurídico
 
-#### ?? **Application Layer** (Casos de Uso)
+#### **Application Layer** (Casos de Uso)
 - **Commands**: Operações que alteram estado do sistema
 - **Queries**: Consultas e recuperação de dados
 - **Handlers**: Processamento dos commands e queries
 - **DTOs**: Objetos de transferência de dados
 - **Interfaces**: Contratos para infraestrutura
 
-#### ?? **Infrastructure Layer** (Tecnologia)
+#### **Infrastructure Layer** (Tecnologia)
 - **Entity Framework Core**: Persistência de dados
 - **Repositories**: Implementação do padrão Repository
 - **Identity**: Autenticação e autorização
 - **External Services**: Integração com APIs externas
 - **Configurations**: Mapeamentos e configurações do EF
 
-#### ?? **API Layer** (Interface)
+#### **API Layer** (Interface)
 - **Controllers**: Endpoints REST
 - **Middlewares**: Cross-cutting concerns
 - **Filters**: Validações e tratamento de erros
 - **Authentication**: Configuração JWT
 - **Swagger**: Documentação da API
 
-## ??? Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### **Backend**
 - **.NET 8.0** - Framework principal
@@ -139,7 +139,7 @@ O projeto segue os princípios da **Clean Architecture** com **Domain Driven Desi
 - **TypeScript** - Linguagem tipada
 - **Angular Material** - Componentes UI
 
-## ?? Como Executar
+## Como Executar
 
 ### **Pré-requisitos**
 - **.NET 8.0 SDK** ou superior
@@ -175,43 +175,43 @@ A API estará disponível em: `https://localhost:7001`
 ### **Acessando a Documentação**
 Swagger UI: `https://localhost:7001/swagger`
 
-## ?? Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 LegalManager.Pro/
-??? ?? LegalManager.Pro.Domain/          # Camada de Domínio
-?   ??? ?? Entities/                     # Entidades de negócio
-?   ?   ??? Usuario.cs                   # Entidade usuário ?
-?   ??? ?? ValueObjects/                 # Objetos de valor
-?   ?   ??? Email.cs                     # Value object para email ?
-?   ??? ?? Enums/                        # Enumerações
-?   ?   ??? PerfilUsuario.cs             # Perfis de usuário ?
-?   ??? ?? Interfaces/                   # Interfaces do domínio
-??? ?? LegalManager.Pro.Application/     # Camada de Aplicação
-?   ??? ?? Commands/                     # Comandos (CQRS)
-?   ??? ?? Queries/                      # Consultas (CQRS)
-?   ??? ?? Handlers/                     # Manipuladores
-?   ??? ?? DTOs/                         # Data Transfer Objects
-?   ??? ?? Interfaces/                   # Contratos da aplicação
-??? ?? LegalManager.Pro.Infrastructure/  # Camada de Infraestrutura
-?   ??? ?? Data/                         # Contexto do EF Core
-?   ??? ?? Repositories/                 # Implementação dos repositórios
-?   ??? ?? Configurations/               # Configurações do EF
-?   ??? ?? Migrations/                   # Migrações do banco
-?   ??? ?? Services/                     # Serviços de infraestrutura
-??? ?? LegalManager.Pro.API/             # Camada de Apresentação
-?   ??? ?? Controllers/                  # Controllers da API
-?   ??? ?? Middlewares/                  # Middlewares customizados
-?   ??? ?? Filters/                      # Filtros da API
-?   ??? Program.cs                       # Ponto de entrada ?
-??? ?? LegalManager.Pro.Tests/           # Testes
-    ??? ?? Domain/                       # Testes da camada de domínio
-    ??? ?? Application/                  # Testes da camada de aplicação
-    ??? ?? Infrastructure/               # Testes da infraestrutura
-    ??? ?? API/                          # Testes da API
+??? LegalManager.Pro.Domain/          # Camada de Domínio
+?   ??? Entities/                     # Entidades de negócio
+?   ?   ??? Usuario.cs                # Entidade usuário ?
+?   ??? ValueObjects/                 # Objetos de valor
+?   ?   ??? Email.cs                  # Value object para email ?
+?   ??? Enums/                        # Enumerações
+?   ?   ??? PerfilUsuario.cs          # Perfis de usuário ?
+?   ??? Interfaces/                   # Interfaces do domínio
+??? LegalManager.Pro.Application/     # Camada de Aplicação
+?   ??? Commands/                     # Comandos (CQRS)
+?   ??? Queries/                      # Consultas (CQRS)
+?   ??? Handlers/                     # Manipuladores
+?   ??? DTOs/                         # Data Transfer Objects
+?   ??? Interfaces/                   # Contratos da aplicação
+??? LegalManager.Pro.Infrastructure/  # Camada de Infraestrutura
+?   ??? Data/                         # Contexto do EF Core
+?   ??? Repositories/                 # Implementação dos repositórios
+?   ??? Configurations/               # Configurações do EF
+?   ??? Migrations/                   # Migrações do banco
+?   ??? Services/                     # Serviços de infraestrutura
+??? LegalManager.Pro.API/             # Camada de Apresentação
+?   ??? Controllers/                  # Controllers da API
+?   ??? Middlewares/                  # Middlewares customizados
+?   ??? Filters/                      # Filtros da API
+?   ??? Program.cs                    # Ponto de entrada ?
+??? LegalManager.Pro.Tests/           # Testes
+    ??? Domain/                       # Testes da camada de domínio
+    ??? Application/                  # Testes da camada de aplicação
+    ??? Infrastructure/               # Testes da infraestrutura
+    ??? API/                          # Testes da API
 ```
 
-## ?? Executando Testes
+## Executando Testes
 
 ### **Todos os Testes**
 ```bash
@@ -228,7 +228,7 @@ dotnet test --collect:"XPlat Code Coverage"
 dotnet test LegalManager.Pro.Tests/
 ```
 
-## ?? Exemplos de Uso da API
+## Exemplos de Uso da API
 
 ### **Autenticação**
 ```http
@@ -261,7 +261,7 @@ GET /api/usuarios?perfil=Advogado&ativo=true
 Authorization: Bearer {token}
 ```
 
-## ?? Domain Layer - Conceitos Implementados
+## Domain Layer - Conceitos Implementados
 
 ### **Entidade Usuario**
 ```csharp
@@ -305,30 +305,30 @@ public enum PerfilUsuario
 }
 ```
 
-## ?? Princípios Aplicados
+## Princípios Aplicados
 
 ### **SOLID**
-- ? **S**ingle Responsibility: Cada classe tem uma responsabilidade específica
-- ? **O**pen/Closed: Abertas para extensão, fechadas para modificação
-- ? **L**iskov Substitution: Subtipos substituem tipos base
-- ? **I**nterface Segregation: Interfaces específicas e coesas
-- ? **D**ependency Inversion: Dependência de abstrações, não implementações
+- **Single Responsibility**: Cada classe tem uma responsabilidade específica
+- **Open/Closed**: Abertas para extensão, fechadas para modificação
+- **Liskov Substitution**: Subtipos substituem tipos base
+- **Interface Segregation**: Interfaces específicas e coesas
+- **Dependency Inversion**: Dependência de abstrações, não implementações
 
 ### **DDD (Domain Driven Design)**
-- ? **Ubiquitous Language**: Linguagem comum entre negócio e desenvolvimento
-- ? **Bounded Contexts**: Contextos bem definidos
-- ? **Entities**: Objetos com identidade e ciclo de vida
-- ? **Value Objects**: Objetos imutáveis definidos por seus valores
-- ? **Domain Services**: Lógica de negócio que não pertence a entidades
+- **Ubiquitous Language**: Linguagem comum entre negócio e desenvolvimento
+- **Bounded Contexts**: Contextos bem definidos
+- **Entities**: Objetos com identidade e ciclo de vida
+- **Value Objects**: Objetos imutáveis definidos por seus valores
+- **Domain Services**: Lógica de negócio que não pertence a entidades
 
 ### **Clean Architecture**
-- ? **Independence of Frameworks**: Não dependente de frameworks específicos
-- ? **Testable**: Regras de negócio podem ser testadas sem UI, banco, etc.
-- ? **Independence of UI**: UI pode mudar sem afetar o sistema
-- ? **Independence of Database**: Banco pode ser trocado sem impacto
-- ? **Independence of External Agencies**: Regras de negócio não sabem sobre o mundo externo
+- **Independence of Frameworks**: Não dependente de frameworks específicos
+- **Testable**: Regras de negócio podem ser testadas sem UI, banco, etc.
+- **Independence of UI**: UI pode mudar sem afetar o sistema
+- **Independence of Database**: Banco pode ser trocado sem impacto
+- **Independence of External Agencies**: Regras de negócio não sabem sobre o mundo externo
 
-## ?? Contribuindo
+## Contribuindo
 
 ### **Como Contribuir**
 1. Faça um Fork do projeto
@@ -354,7 +354,7 @@ chore: tarefas de build, configuração, etc
 - Documentar APIs públicas
 - Seguir padrões do projeto
 
-## ?? Roadmap
+## Roadmap
 
 ### **Fase 1 - Fundação** ?
 - [x] Estrutura do projeto com Clean Architecture
@@ -393,7 +393,7 @@ chore: tarefas de build, configuração, etc
 - [ ] Backup automatizado
 - [ ] Documentação completa
 
-## ?? Aprendizados Técnicos
+## Aprendizados Técnicos
 
 Este projeto demonstra:
 
@@ -420,22 +420,20 @@ Este projeto demonstra:
 - Padrões de nomenclatura
 - Organização de pastas
 
-## ?? Contato
+## Contato
 
 **Desenvolvedor:** Willians Silva  
 **Email:** willians.dev@email.com  
 **LinkedIn:** [willians-silva](https://linkedin.com/in/willians-silva)  
 **GitHub:** [@Willians167](https://github.com/Willians167)
 
-## ?? Licença
+## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
 
 ? **Se este projeto te ajudou, considere dar uma estrela!**
-
-[![Feito com ?? e ?](https://img.shields.io/badge/Made%20with-??%20and%20?-red.svg)](https://github.com/Willians167/LegalManager.Pro)
 
 ---
 
