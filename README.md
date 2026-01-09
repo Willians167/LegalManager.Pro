@@ -1,6 +1,6 @@
 # LegalManager.Pro
 
-> **Sistema de Gestão Jurídica** - Uma solução completa para escritórios de advocacia
+> **Sistema de Gestao Juridica** - Uma solucao completa para escritorios de advocacia
 
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/download)
 [![C#](https://img.shields.io/badge/C%23-12.0-green.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
@@ -9,56 +9,56 @@
 
 ## Sobre o Projeto
 
-O **LegalManager.Pro** é um sistema de gestão jurídica (LegalTech) desenvolvido com foco em escritórios de advocacia modernos. Construído seguindo os princípios da **Clean Architecture** e **Domain Driven Design (DDD)**, oferece uma solução robusta, escalável e de fácil manutenção.
+O **LegalManager.Pro** e um sistema de gestao juridica (LegalTech) desenvolvido com foco em escritorios de advocacia modernos. Construido seguindo os principios da **Clean Architecture** e **Domain Driven Design (DDD)**, oferece uma solucao robusta, escalavel e de facil manutencao.
 
 ### Objetivos
 
-- Modernizar a gestão de escritórios de advocacia
-- Centralizar informações de clientes, processos e documentos
+- Modernizar a gestao de escritorios de advocacia
+- Centralizar informacoes de clientes, processos e documentos
 - Automatizar controle de prazos e agenda
 - Prover dashboards com indicadores de performance
-- Garantir segurança e conformidade com LGPD
+- Garantir seguranca e conformidade com LGPD
 
 ## Funcionalidades
 
-### **Autenticação e Autorização**
-- Sistema de autenticação JWT com Refresh Token
+### **Autenticacao e Autorizacao**
+- Sistema de autenticacao JWT com Refresh Token
 - Controle de acesso baseado em perfis (Admin, Advogado, Assistente)
-- Gestão de usuários com diferentes níveis de permissão
+- Gestao de usuarios com diferentes niveis de permissao
 
-### **Gestão de Usuários**
-- Cadastro e manutenção de usuários
-- Controle de perfis e permissões
-- Histórico de acesso e atividades
+### **Gestao de Usuarios**
+- Cadastro e manutencao de usuarios
+- Controle de perfis e permissoes
+- Historico de acesso e atividades
 
-### **Gestão de Clientes**
-- Cadastro completo de pessoas físicas e jurídicas
-- Controle de documentos e informações de contato
-- Histórico de relacionamento
+### **Gestao de Clientes**
+- Cadastro completo de pessoas fisicas e juridicas
+- Controle de documentos e informacoes de contato
+- Historico de relacionamento
 
-### **Gestão de Processos Jurídicos**
+### **Gestao de Processos Juridicos**
 - Controle completo de processos
 - Acompanhamento de andamentos
-- Vinculação com clientes e responsáveis
+- Vinculacao com clientes e responsaveis
 
 ### **Controle de Prazos e Agenda**
 - Sistema de alertas para prazos processuais
 - Agenda integrada com processos
-- Notificações automáticas
+- Notificacoes automaticas
 
 ### **Gerenciamento de Documentos**
-- Upload e organização de documentos
+- Upload e organizacao de documentos
 - Versionamento e controle de acesso
-- Integração com processos
+- Integracao com processos
 
-### **Dashboard e Relatórios**
+### **Dashboard e Relatorios**
 - Indicadores de performance
-- Relatórios gerenciais
-- Análises estatísticas
+- Relatorios gerenciais
+- Analises estatisticas
 
 ## Arquitetura
 
-O projeto segue os princípios da **Clean Architecture** com **Domain Driven Design**, garantindo:
+O projeto segue os principios da **Clean Architecture** com **Domain Driven Design**, garantindo:
 
 ```
 ???????????????????
@@ -82,53 +82,53 @@ O projeto segue os princípios da **Clean Architecture** com **Domain Driven Desi
 
 ### Camadas do Sistema
 
-#### **Domain Layer** (Núcleo do Negócio)
+#### **Domain Layer** (Nucleo do Negocio)
 - **Entidades**: `Usuario`, `Cliente`, `ProcessoJuridico`, `Documento`
 - **Value Objects**: `Email`, `CPF`, `CNPJ`, `Endereco`, `Telefone`
 - **Enums**: `PerfilUsuario`, `StatusProcesso`, `TipoDocumento`
-- **Regras de Negócio**: Validações e comportamentos específicos do domínio jurídico
+- **Regras de Negocio**: Validacoes e comportamentos especificos do dominio juridico
 
 #### **Application Layer** (Casos de Uso)
-- **Commands**: Operações que alteram estado do sistema
-- **Queries**: Consultas e recuperação de dados
+- **Commands**: Operacoes que alteram estado do sistema
+- **Queries**: Consultas e recuperacao de dados
 - **Handlers**: Processamento dos commands e queries
-- **DTOs**: Objetos de transferência de dados
+- **DTOs**: Objetos de transferencia de dados
 - **Interfaces**: Contratos para infraestrutura
 
 #### **Infrastructure Layer** (Tecnologia)
-- **Entity Framework Core**: Persistência de dados
-- **Repositories**: Implementação do padrão Repository
-- **Identity**: Autenticação e autorização
-- **External Services**: Integração com APIs externas
-- **Configurations**: Mapeamentos e configurações do EF
+- **Entity Framework Core**: Persistencia de dados
+- **Repositories**: Implementacao do padrao Repository
+- **Identity**: Autenticacao e autorizacao
+- **External Services**: Integracao com APIs externas
+- **Configurations**: Mapeamentos e configuracoes do EF
 
 #### **API Layer** (Interface)
 - **Controllers**: Endpoints REST
 - **Middlewares**: Cross-cutting concerns
-- **Filters**: Validações e tratamento de erros
-- **Authentication**: Configuração JWT
-- **Swagger**: Documentação da API
+- **Filters**: Validacoes e tratamento de erros
+- **Authentication**: Configuracao JWT
+- **Swagger**: Documentacao da API
 
 ## Tecnologias Utilizadas
 
 ### **Backend**
 - **.NET 8.0** - Framework principal
-- **C# 12** - Linguagem de programação
+- **C# 12** - Linguagem de programacao
 - **ASP.NET Core Web API** - Framework web
 - **Entity Framework Core** - ORM para acesso a dados
 - **SQL Server** - Banco de dados principal
 
-### **Autenticação & Segurança**
-- **JWT (JSON Web Tokens)** - Autenticação stateless
-- **Refresh Tokens** - Renovação segura de tokens
+### **Autenticacao & Seguranca**
+- **JWT (JSON Web Tokens)** - Autenticacao stateless
+- **Refresh Tokens** - Renovacao segura de tokens
 - **BCrypt** - Hash de senhas
-- **HTTPS** - Comunicação criptografada
+- **HTTPS** - Comunicacao criptografada
 
-### **Documentação & Testes**
-- **Swagger/OpenAPI** - Documentação interativa da API
-- **xUnit** - Framework de testes unitários
+### **Documentacao & Testes**
+- **Swagger/OpenAPI** - Documentacao interativa da API
+- **xUnit** - Framework de testes unitarios
 - **Moq** - Biblioteca de mocking
-- **FluentAssertions** - Assertions mais legíveis
+- **FluentAssertions** - Assertions mais legiveis
 
 ### **Logs & Monitoramento**
 - **Serilog** - Logging estruturado
@@ -141,72 +141,72 @@ O projeto segue os princípios da **Clean Architecture** com **Domain Driven Desi
 
 ## Como Executar
 
-### **Pré-requisitos**
+### **Pre-requisitos**
 - **.NET 8.0 SDK** ou superior
 - **SQL Server** (LocalDB, Express ou completo)
-- **Git** para controle de versão
+- **Git** para controle de versao
 - **IDE**: Visual Studio 2022 ou VS Code
 
-### **Clonando o Repositório**
+### **Clonando o Repositorio**
 ```bash
 git clone https://github.com/Willians167/LegalManager.Pro.git
 cd LegalManager-pro
 ```
 
-### **Restaurando Dependências**
+### **Restaurando Dependencias**
 ```bash
 dotnet restore
 ```
 
-### **Configuração do Banco de Dados**
+### **Configuracao do Banco de Dados**
 1. Configure a connection string no `appsettings.json`
 2. Execute as migrations:
 ```bash
 dotnet ef database update --project LegalManager.Pro.Infrastructure --startup-project LegalManager.Pro.API
 ```
 
-### **Executando a Aplicação**
+### **Executando a Aplicacao**
 ```bash
 dotnet run --project LegalManager.Pro.API
 ```
 
-A API estará disponível em: `https://localhost:7001`
+A API estara disponivel em: `https://localhost:7001`
 
-### **Acessando a Documentação**
+### **Acessando a Documentacao**
 Swagger UI: `https://localhost:7001/swagger`
 
 ## Estrutura do Projeto
 
 ```
 LegalManager.Pro/
-??? LegalManager.Pro.Domain/          # Camada de Domínio
-?   ??? Entities/                     # Entidades de negócio
-?   ?   ??? Usuario.cs                # Entidade usuário ?
+??? LegalManager.Pro.Domain/          # Camada de Dominio
+?   ??? Entities/                     # Entidades de negocio
+?   ?   ??? Usuario.cs                # Entidade usuario ?
 ?   ??? ValueObjects/                 # Objetos de valor
 ?   ?   ??? Email.cs                  # Value object para email ?
-?   ??? Enums/                        # Enumerações
-?   ?   ??? PerfilUsuario.cs          # Perfis de usuário ?
-?   ??? Interfaces/                   # Interfaces do domínio
-??? LegalManager.Pro.Application/     # Camada de Aplicação
+?   ??? Enums/                        # Enumeracoes
+?   ?   ??? PerfilUsuario.cs          # Perfis de usuario ?
+?   ??? Interfaces/                   # Interfaces do dominio
+??? LegalManager.Pro.Application/     # Camada de Aplicacao
 ?   ??? Commands/                     # Comandos (CQRS)
 ?   ??? Queries/                      # Consultas (CQRS)
 ?   ??? Handlers/                     # Manipuladores
 ?   ??? DTOs/                         # Data Transfer Objects
-?   ??? Interfaces/                   # Contratos da aplicação
+?   ??? Interfaces/                   # Contratos da aplicacao
 ??? LegalManager.Pro.Infrastructure/  # Camada de Infraestrutura
 ?   ??? Data/                         # Contexto do EF Core
-?   ??? Repositories/                 # Implementação dos repositórios
-?   ??? Configurations/               # Configurações do EF
-?   ??? Migrations/                   # Migrações do banco
-?   ??? Services/                     # Serviços de infraestrutura
-??? LegalManager.Pro.API/             # Camada de Apresentação
+?   ??? Repositories/                 # Implementacao dos repositorios
+?   ??? Configurations/               # Configuracoes do EF
+?   ??? Migrations/                   # Migracoes do banco
+?   ??? Services/                     # Servicos de infraestrutura
+??? LegalManager.Pro.API/             # Camada de Apresentacao
 ?   ??? Controllers/                  # Controllers da API
 ?   ??? Middlewares/                  # Middlewares customizados
 ?   ??? Filters/                      # Filtros da API
 ?   ??? Program.cs                    # Ponto de entrada ?
 ??? LegalManager.Pro.Tests/           # Testes
-    ??? Domain/                       # Testes da camada de domínio
-    ??? Application/                  # Testes da camada de aplicação
+    ??? Domain/                       # Testes da camada de dominio
+    ??? Application/                  # Testes da camada de aplicacao
     ??? Infrastructure/               # Testes da infraestrutura
     ??? API/                          # Testes da API
 ```
@@ -223,14 +223,14 @@ dotnet test
 dotnet test --collect:"XPlat Code Coverage"
 ```
 
-### **Testes de uma Camada Específica**
+### **Testes de uma Camada Especifica**
 ```bash
 dotnet test LegalManager.Pro.Tests/
 ```
 
 ## Exemplos de Uso da API
 
-### **Autenticação**
+### **Autenticacao**
 ```http
 POST /api/auth/login
 Content-Type: application/json
@@ -241,21 +241,21 @@ Content-Type: application/json
 }
 ```
 
-### **Criando um Usuário**
+### **Criando um Usuario**
 ```http
 POST /api/usuarios
 Authorization: Bearer {token}
 Content-Type: application/json
 
 {
-  "nome": "João Silva",
+  "nome": "Joao Silva",
   "email": "joao.silva@legalmanager.com",
   "senha": "SenhaSegura123!",
   "perfil": 2
 }
 ```
 
-### **Consultando Usuários**
+### **Consultando Usuarios**
 ```http
 GET /api/usuarios?perfil=Advogado&ativo=true
 Authorization: Bearer {token}
@@ -273,7 +273,7 @@ public class Usuario
     public PerfilUsuario Perfil { get; private set; }
     public bool Ativo { get; private set; }
     
-    // Métodos de negócio
+    // Metodos de negocio
     public void AlterarEmail(Email novoEmail) { }
     public void RegistrarLogin() { }
     public void Desativar() { }
@@ -288,8 +288,8 @@ public sealed class Email : IEquatable<Email>
     
     public static Email Criar(string email)
     {
-        // Validações de formato e obrigatoriedade
-        // Normalização (trim, lowercase)
+        // Validacoes de formato e obrigatoriedade
+        // Normalizacao (trim, lowercase)
         return new Email(email);
     }
 }
@@ -305,120 +305,120 @@ public enum PerfilUsuario
 }
 ```
 
-## Princípios Aplicados
+## Principios Aplicados
 
 ### **SOLID**
-- **Single Responsibility**: Cada classe tem uma responsabilidade específica
-- **Open/Closed**: Abertas para extensão, fechadas para modificação
+- **Single Responsibility**: Cada classe tem uma responsabilidade especifica
+- **Open/Closed**: Abertas para extensao, fechadas para modificacao
 - **Liskov Substitution**: Subtipos substituem tipos base
-- **Interface Segregation**: Interfaces específicas e coesas
-- **Dependency Inversion**: Dependência de abstrações, não implementações
+- **Interface Segregation**: Interfaces especificas e coesas
+- **Dependency Inversion**: Dependencia de abstracoes, nao implementacoes
 
 ### **DDD (Domain Driven Design)**
-- **Ubiquitous Language**: Linguagem comum entre negócio e desenvolvimento
+- **Ubiquitous Language**: Linguagem comum entre negocio e desenvolvimento
 - **Bounded Contexts**: Contextos bem definidos
 - **Entities**: Objetos com identidade e ciclo de vida
-- **Value Objects**: Objetos imutáveis definidos por seus valores
-- **Domain Services**: Lógica de negócio que não pertence a entidades
+- **Value Objects**: Objetos imutaveis definidos por seus valores
+- **Domain Services**: Logica de negocio que nao pertence a entidades
 
 ### **Clean Architecture**
-- **Independence of Frameworks**: Não dependente de frameworks específicos
-- **Testable**: Regras de negócio podem ser testadas sem UI, banco, etc.
+- **Independence of Frameworks**: Nao dependente de frameworks especificos
+- **Testable**: Regras de negocio podem ser testadas sem UI, banco, etc.
 - **Independence of UI**: UI pode mudar sem afetar o sistema
 - **Independence of Database**: Banco pode ser trocado sem impacto
-- **Independence of External Agencies**: Regras de negócio não sabem sobre o mundo externo
+- **Independence of External Agencies**: Regras de negocio nao sabem sobre o mundo externo
 
 ## Contribuindo
 
 ### **Como Contribuir**
-1. Faça um Fork do projeto
+1. Faca um Fork do projeto
 2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'feat: Add some AmazingFeature'`)
+3. Commit suas mudancas (`git commit -m 'feat: Add some AmazingFeature'`)
 4. Push para a branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-### **Padrões de Commit**
+### **Padroes de Commit**
 ```
 feat: nova funcionalidade
-fix: correção de bug
-docs: documentação
-style: formatação, ponto e vírgula ausente, etc
-refactor: refatoração de código
-test: adição ou correção de testes
-chore: tarefas de build, configuração, etc
+fix: correcao de bug
+docs: documentacao
+style: formatacao, ponto e virgula ausente, etc
+refactor: refatoracao de codigo
+test: adicao ou correcao de testes
+chore: tarefas de build, configuracao, etc
 ```
 
 ### **Code Review**
-- Seguir princípios SOLID
+- Seguir principios SOLID
 - Manter cobertura de testes > 80%
-- Documentar APIs públicas
-- Seguir padrões do projeto
+- Documentar APIs publicas
+- Seguir padroes do projeto
 
 ## Roadmap
 
-### **Fase 1 - Fundação** ?
+### **Fase 1 - Fundacao** ?
 - [x] Estrutura do projeto com Clean Architecture
-- [x] Domain Layer com entidades básicas (Usuario)
-- [x] Value Objects (Email) com validações
-- [x] Enums de domínio (PerfilUsuario)
-- [x] Configuração inicial da API com Swagger
+- [x] Domain Layer com entidades basicas (Usuario)
+- [x] Value Objects (Email) com validacoes
+- [x] Enums de dominio (PerfilUsuario)
+- [x] Configuracao inicial da API com Swagger
 
 ### **Fase 2 - Core Business** ??
 - [ ] Application Layer completa (CQRS)
 - [ ] Infrastructure Layer com EF Core
-- [ ] Sistema de autenticação JWT
-- [ ] CRUD completo de usuários
+- [ ] Sistema de autenticacao JWT
+- [ ] CRUD completo de usuarios
 
-### **Fase 3 - Domínio Expandido** ??
+### **Fase 3 - Dominio Expandido** ??
 - [ ] Entidade Cliente com Value Objects (CPF, CNPJ)
 - [ ] Entidade ProcessoJuridico
 - [ ] Entidade Documento
 - [ ] Value Object Endereco
 
-### **Fase 4 - Funcionalidades Avançadas** ??
-- [ ] Gestão de processos jurídicos
+### **Fase 4 - Funcionalidades Avancadas** ??
+- [ ] Gestao de processos juridicos
 - [ ] Sistema de documentos
 - [ ] Controle de prazos e agenda
-- [ ] Notificações automáticas
+- [ ] Notificacoes automaticas
 
-### **Fase 5 - Interface e Experiência** ??
+### **Fase 5 - Interface e Experiencia** ??
 - [ ] Frontend Angular
 - [ ] Dashboard interativo
-- [ ] Relatórios e análises
+- [ ] Relatorios e analises
 - [ ] Mobile app (PWA)
 
-### **Fase 6 - Produção** ??
+### **Fase 6 - Producao** ??
 - [ ] Deploy automatizado
 - [ ] Monitoramento e logs
 - [ ] Backup automatizado
-- [ ] Documentação completa
+- [ ] Documentacao completa
 
-## Aprendizados Técnicos
+## Aprendizados Tecnicos
 
 Este projeto demonstra:
 
 ### **Clean Architecture**
-- Separação clara de responsabilidades
-- Dependências apontando para o centro
+- Separacao clara de responsabilidades
+- Dependencias apontando para o centro
 - Testabilidade e manutenibilidade
 
 ### **Domain Driven Design**
-- Modelagem rica do domínio
-- Value Objects com validações
-- Linguagem ubíqua
+- Modelagem rica do dominio
+- Value Objects com validacoes
+- Linguagem ubiqua
 
-### **Boas Práticas C#**
+### **Boas Praticas C#**
 - Encapsulamento com `private set`
-- Factory methods para criação segura
-- Implementação adequada de `IEquatable`
+- Factory methods para criacao segura
+- Implementacao adequada de `IEquatable`
 - Operators overloading
 - Implicit conversions
 
 ### **Arquitetura Empresarial**
 - Estrutura de projetos profissional
-- Configuração adequada do .NET 8
-- Padrões de nomenclatura
-- Organização de pastas
+- Configuracao adequada do .NET 8
+- Padroes de nomenclatura
+- Organizacao de pastas
 
 ## Contato
 
@@ -427,14 +427,16 @@ Este projeto demonstra:
 **LinkedIn:** [willians-silva](https://linkedin.com/in/willians-silva)  
 **GitHub:** [@Willians167](https://github.com/Willians167)
 
-## Licença
+## Licenca
 
-Este projeto está licenciado sob a [MIT License](LICENSE).
+Este projeto esta licenciado sob a [MIT License](LICENSE).
 
 ---
 
 ? **Se este projeto te ajudou, considere dar uma estrela!**
 
+[![Feito com ?? e ?](https://img.shields.io/badge/Made%20with-??%20and%20?-red.svg)](https://github.com/Willians167/LegalManager.Pro)
+
 ---
 
-> **"O melhor código é aquele que conta uma história clara do negócio!"**
+> **"O melhor codigo e aquele que conta uma historia clara do negocio!"**
