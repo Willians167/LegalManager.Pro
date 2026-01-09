@@ -1,0 +1,6 @@
+@LegalManager.Pro.API_HostAddress = http://localhost:5017
+
+GET {{LegalManager.Pro.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
