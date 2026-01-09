@@ -61,23 +61,23 @@ O **LegalManager.Pro** e um sistema de gestao juridica (LegalTech) desenvolvido 
 O projeto segue os principios da **Clean Architecture** com **Domain Driven Design**, garantindo:
 
 ```
-???????????????????
-?   API Layer     ?  ? Controllers, Middlewares, Auth
-???????????????????
-      ?
-???????????????????
-? Application     ?  ? Use Cases, Commands, Queries
-? Layer           ?
-???????????????????
-      ?
-???????????????????
-? Domain Layer    ?  ? Entities, Value Objects, Rules
-???????????????????
-      ?
-???????????????????
-? Infrastructure  ?  ? EF Core, Repositories, External APIs
-? Layer           ?
-???????????????????
+┌─────────────────┐
+│   API Layer     │  ← Controllers, Middlewares, Auth
+└─────┬───────────┘
+      │
+┌─────▼───────────┐
+│ Application     │  ← Use Cases, Commands, Queries
+│ Layer           │
+└─────┬───────────┘
+      │
+┌─────▼───────────┐
+│ Domain Layer    │  ← Entities, Value Objects, Rules
+└─────────────────┘
+      ▲
+┌─────┴───────────┐
+│ Infrastructure  │  ← EF Core, Repositories, External APIs
+│ Layer           │
+└─────────────────┘
 ```
 
 ### Camadas do Sistema
@@ -179,36 +179,36 @@ Swagger UI: `https://localhost:7001/swagger`
 
 ```
 LegalManager.Pro/
-??? LegalManager.Pro.Domain/          # Camada de Dominio
-?   ??? Entities/                     # Entidades de negocio
-?   ?   ??? Usuario.cs                # Entidade usuario ?
-?   ??? ValueObjects/                 # Objetos de valor
-?   ?   ??? Email.cs                  # Value object para email ?
-?   ??? Enums/                        # Enumeracoes
-?   ?   ??? PerfilUsuario.cs          # Perfis de usuario ?
-?   ??? Interfaces/                   # Interfaces do dominio
-??? LegalManager.Pro.Application/     # Camada de Aplicacao
-?   ??? Commands/                     # Comandos (CQRS)
-?   ??? Queries/                      # Consultas (CQRS)
-?   ??? Handlers/                     # Manipuladores
-?   ??? DTOs/                         # Data Transfer Objects
-?   ??? Interfaces/                   # Contratos da aplicacao
-??? LegalManager.Pro.Infrastructure/  # Camada de Infraestrutura
-?   ??? Data/                         # Contexto do EF Core
-?   ??? Repositories/                 # Implementacao dos repositorios
-?   ??? Configurations/               # Configuracoes do EF
-?   ??? Migrations/                   # Migracoes do banco
-?   ??? Services/                     # Servicos de infraestrutura
-??? LegalManager.Pro.API/             # Camada de Apresentacao
-?   ??? Controllers/                  # Controllers da API
-?   ??? Middlewares/                  # Middlewares customizados
-?   ??? Filters/                      # Filtros da API
-?   ??? Program.cs                    # Ponto de entrada ?
-??? LegalManager.Pro.Tests/           # Testes
-    ??? Domain/                       # Testes da camada de dominio
-    ??? Application/                  # Testes da camada de aplicacao
-    ??? Infrastructure/               # Testes da infraestrutura
-    ??? API/                          # Testes da API
+├── LegalManager.Pro.Domain/          # Camada de Dominio
+│   ├── Entities/                     # Entidades de negocio
+│   │   └── Usuario.cs                # Entidade usuario ✓
+│   ├── ValueObjects/                 # Objetos de valor
+│   │   └── Email.cs                  # Value object para email ✓
+│   ├── Enums/                        # Enumeracoes
+│   │   └── PerfilUsuario.cs          # Perfis de usuario ✓
+│   └── Interfaces/                   # Interfaces do dominio
+├── LegalManager.Pro.Application/     # Camada de Aplicacao
+│   ├── Commands/                     # Comandos (CQRS)
+│   ├── Queries/                      # Consultas (CQRS)
+│   ├── Handlers/                     # Manipuladores
+│   ├── DTOs/                         # Data Transfer Objects
+│   └── Interfaces/                   # Contratos da aplicacao
+├── LegalManager.Pro.Infrastructure/  # Camada de Infraestrutura
+│   ├── Data/                         # Contexto do EF Core
+│   ├── Repositories/                 # Implementacao dos repositorios
+│   ├── Configurations/               # Configuracoes do EF
+│   ├── Migrations/                   # Migracoes do banco
+│   └── Services/                     # Servicos de infraestrutura
+├── LegalManager.Pro.API/             # Camada de Apresentacao
+│   ├── Controllers/                  # Controllers da API
+│   ├── Middlewares/                  # Middlewares customizados
+│   ├── Filters/                      # Filtros da API
+│   └── Program.cs                    # Ponto de entrada ✓
+└── LegalManager.Pro.Tests/           # Testes
+    ├── Domain/                       # Testes da camada de dominio
+    ├── Application/                  # Testes da camada de aplicacao
+    ├── Infrastructure/               # Testes da infraestrutura
+    └── API/                          # Testes da API
 ```
 
 ## Executando Testes
@@ -356,38 +356,38 @@ chore: tarefas de build, configuracao, etc
 
 ## Roadmap
 
-### **Fase 1 - Fundacao** ?
+### **Fase 1 - Fundacao** ✅
 - [x] Estrutura do projeto com Clean Architecture
 - [x] Domain Layer com entidades basicas (Usuario)
 - [x] Value Objects (Email) com validacoes
 - [x] Enums de dominio (PerfilUsuario)
 - [x] Configuracao inicial da API com Swagger
 
-### **Fase 2 - Core Business** ??
+### **Fase 2 - Core Business** 🚧
 - [ ] Application Layer completa (CQRS)
 - [ ] Infrastructure Layer com EF Core
 - [ ] Sistema de autenticacao JWT
 - [ ] CRUD completo de usuarios
 
-### **Fase 3 - Dominio Expandido** ??
+### **Fase 3 - Dominio Expandido** 📋
 - [ ] Entidade Cliente com Value Objects (CPF, CNPJ)
 - [ ] Entidade ProcessoJuridico
 - [ ] Entidade Documento
 - [ ] Value Object Endereco
 
-### **Fase 4 - Funcionalidades Avancadas** ??
+### **Fase 4 - Funcionalidades Avancadas** 🔧
 - [ ] Gestao de processos juridicos
 - [ ] Sistema de documentos
 - [ ] Controle de prazos e agenda
 - [ ] Notificacoes automaticas
 
-### **Fase 5 - Interface e Experiencia** ??
+### **Fase 5 - Interface e Experiencia** 🎨
 - [ ] Frontend Angular
 - [ ] Dashboard interativo
 - [ ] Relatorios e analises
 - [ ] Mobile app (PWA)
 
-### **Fase 6 - Producao** ??
+### **Fase 6 - Producao** 🚀
 - [ ] Deploy automatizado
 - [ ] Monitoramento e logs
 - [ ] Backup automatizado
@@ -433,9 +433,9 @@ Este projeto esta licenciado sob a [MIT License](LICENSE).
 
 ---
 
-? **Se este projeto te ajudou, considere dar uma estrela!**
+⭐ **Se este projeto te ajudou, considere dar uma estrela!**
 
-[![Feito com ?? e ?](https://img.shields.io/badge/Made%20with-??%20and%20?-red.svg)](https://github.com/Willians167/LegalManager.Pro)
+[![Feito com ❤️ e ☕](https://img.shields.io/badge/Made%20with-❤️%20and%20☕-red.svg)](https://github.com/Willians167/LegalManager.Pro)
 
 ---
 
