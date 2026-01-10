@@ -1,12 +1,31 @@
 ﻿{
   "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:5017",
+      "sslPort": 7001
+    }
+  },
   "profiles": {
-    "http": {
+    "LegalManager.Pro.API": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "http://localhost:5017",
+      "applicationUrl": "https://localhost:7001;http://localhost:5017",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionStrings__DefaultConnection": "Server=localhost,1433;Database=LegalManager;User Id=sa;Password=SOul1980;TrustServerCertificate=True;",
+        "ConnectionStrings__MongoConnection": "mongodb://Will_The_Dev:SOul1980@localhost:27017",
+        "ConnectionStrings__RabbitMq": "amqp://Will_The_Dev:SOul1980@localhost:5672/"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
